@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/parse/onliner_product/{slug}', 'ParserController@getParse');
+
+Route::get('/parse/add/{slug}', 'ParserController@addCatalog');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/parse/onliner_catalog', 'ParserController@getCatalog');
